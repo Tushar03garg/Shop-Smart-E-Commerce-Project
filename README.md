@@ -1,29 +1,81 @@
-Decision Tree Classifier and Regressor with Pruning
-Project Overview
+Decision Tree Pruning System
+📌 Project Overview
 
-This project implements Decision Tree Classifier and Decision Tree Regressor models using pruning techniques to improve model performance and control overfitting. The models are built using Python machine learning libraries and applied to a dataset related to user behavior in an e-commerce environment.
+This project demonstrates the implementation of Decision Tree Classifier and Decision Tree Regressor models using pruning techniques to improve model performance and prevent overfitting. Decision Trees can grow very complex and memorize training data, so pruning parameters were applied to control tree size and enhance generalization.
 
-The primary objective is to understand how pruning parameters affect model complexity and performance.
+The models were developed using Python machine learning libraries and evaluated using standard performance metrics.
 
-Models Implemented
+🎯 Problem Statement
+
+Decision Trees often suffer from:
+
+Overfitting on training data
+High model complexity
+Poor generalization on unseen data
+
+This project applies tree pruning techniques to:
+
+Reduce overfitting
+Improve model performance
+Control model complexity
+Enhance prediction accuracy
+📊 Dataset Description
+
+The dataset contains multiple input features used to train and evaluate the Decision Tree models.
+
+Each row represents a data instance with numerical and categorical attributes.
+
+Typical steps performed:
+
+Data preprocessing
+Feature selection
+Model training
+Model evaluation
+
+Target Variable:
+
+For Classifier → Categorical output
+For Regressor → Continuous numerical output
+⚙️ Technologies Used
+
+Python 🐍
+NumPy
+Pandas
+Matplotlib
+Scikit-learn
+
+🔄 Workflow
+
+Data Loading
+Data Cleaning
+Exploratory Data Analysis (EDA)
+Feature Preprocessing
+Train-Test Split
+Model Training
+Model Pruning
+Model Evaluation
+Performance Comparison
+
+🤖 Models Used
+
+The following machine learning models were implemented:
+
 Decision Tree Classifier
-Used for classification tasks
-Predicts categorical outcomes (e.g., purchase or not)
 Decision Tree Regressor
-Used for regression tasks
-Predicts continuous numerical values
-Pruning Technique Used
 
-Pruning is applied to reduce overfitting and improve generalization of the decision tree models.
+🌳 Pruning Techniques Used
 
-The following pruning parameters were used:
+The following pruning parameters were applied to control tree growth:
 
 max_depth
+
 Limits the maximum depth of the tree
-Controls model complexity
+Prevents the model from becoming too complex
+
 min_samples_split
-Minimum number of samples required to split an internal node
-Prevents unnecessary splits
+
+Minimum number of samples required to split a node
+Reduces unnecessary splits
 
 Example:
 
@@ -32,63 +84,48 @@ DecisionTreeClassifier(
     min_samples_split=10,
     random_state=42
 )
-Technologies and Libraries Used
-Python
-NumPy
-Pandas
-Matplotlib
-Scikit-learn
-Dataset
+📈 Results
 
-The dataset contains information about user sessions and browsing behavior in an e-commerce platform. Features include page visits, session duration, browser information, and visitor type.
+Applying pruning improved model performance by:
 
-Target variable:
-
-Revenue
-Indicates whether the visitor made a purchase
-Workflow
-
-The following steps were performed:
-
-Data Loading
-Data Preprocessing
-Exploratory Data Analysis (EDA)
-Feature Selection
-Model Training
-Model Evaluation
-Model Pruning
-Visualization of Results
-Evaluation Metrics
+Reducing overfitting
+Controlling tree complexity
+Improving prediction stability
+Enhancing generalization on test data
+📊 Evaluation Metrics
 For Classification
+
 Accuracy
 Precision
 Recall
 F1 Score
 Confusion Matrix
+
 For Regression
+
 Mean Absolute Error (MAE)
 Mean Squared Error (MSE)
 R² Score
-Project Structure
-Decision-Tree-Project/
-│
+
+🚀 How to Run
+
+Clone the repository:
+
+git clone https://github.com/your-username/your-repo-name.git
+
+Navigate to project folder:
+
+cd your-repo-name
+
+Install dependencies:
+
+pip install numpy pandas matplotlib scikit-learn
+
+Run the notebook or script.
+
+📁 Project Structure
 ├── data/
-│   └── dataset.csv
-│
 ├── notebooks/
-│   └── Decision Tree.ipynb
-│
 ├── models/
-│   ├── decision_tree_classifier.py
-│   └── decision_tree_regressor.py
-│
-├── images/
-│   └── plots.png
-│
 ├── README.md
-│
 └── requirements.txt
-Results
-Pruning reduced overfitting
-Controlled tree depth improved generalization
-Model performance improved after tuning pruning parameters
