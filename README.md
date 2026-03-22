@@ -1,4 +1,5 @@
 Decision Tree Pruning System
+
 📌 Project Overview
 
 This project demonstrates the implementation of Decision Tree Classifier and Decision Tree Regressor models using pruning techniques to improve model performance and prevent overfitting. Decision Trees can grow very complex and memorize training data, so pruning parameters were applied to control tree size and enhance generalization.
